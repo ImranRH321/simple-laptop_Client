@@ -14,8 +14,8 @@ const TabletsSlider = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 4000,
+    autoplaySpeed: 4000,
     cssEase: "linear",
   };
 
@@ -63,7 +63,7 @@ const TabletsSlider = () => {
                   {r.resolution?.slice(0, 40)}
                 </h3>
                 <h3 className="text-grey font-bold text-start px-9">
-                  Price: <span className="text-primary">{r.price}</span>
+                  Price: <span className="text-primary">{r.price}</span> <span className="text-3xl font-bold text-black">৳</span>
                 </h3>
                 <h3>
                   <Link

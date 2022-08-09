@@ -6,7 +6,7 @@ import auth from "../../hooks/useFirebase";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
- console.log(user);
+  console.log(user);
   const logOut = () => {
     localStorage.removeItem("token");
     signOut(auth);
@@ -31,7 +31,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link className="a mx-4 font-bold" to="/tablets">
-        Tablets
+          Tablets
         </Link>
       </li>
       <li>
@@ -69,12 +69,14 @@ const Navbar = () => {
           </label>
           <ul
             tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            class="text-black bg-black menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {menuItems}
           </ul>
         </div>
-        <a class="btn btn-ghost normal-case text-xl">Computer</a>
+        <Link to="/" class="text-2xl font-bold text-warning capitalize">
+          Laptop@Shorom
+        </Link>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal p-0">{menuItems}</ul>
@@ -82,7 +84,7 @@ const Navbar = () => {
       <div class="navbar-end">
         <div>
           {/*  */}
-        <label  for="my-drawer-2" tabindex="1" class="btn btn-ghost lg:hidden">
+          <label for="my-drawer-2" tabindex="1" class="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5"
@@ -98,14 +100,8 @@ const Navbar = () => {
               />
             </svg>
           </label>
-          {/* <label
-            for="my-drawer-2"
-            class="btn btn-primary drawer-button lg:hidden"
-          >
-           Dashboard
-          </label> */}
         </div>
-        <div class="dropdown dropdown-end">
+        <div class="dropdown dropdown-end  border-red-900">
           {user && (
             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
               <div class="w-10 rounded-full">
@@ -120,7 +116,7 @@ const Navbar = () => {
           {user && (
             <ul
               tabindex="1"
-              class="w-[260px] text-black menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box"
+              class="w-[260px] text-black bg-white menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box"
             >
               {user && (
                 <li>
@@ -133,46 +129,48 @@ const Navbar = () => {
                           alt="loading img"
                         />
                       </div>
-                      {/* <p className="text-white">{user?.displayName}</p>
-                      <p className="text-white">{user?.email}</p> */}
+                      <p className="font-bold text-primary">{user?.displayName}</p>
+                      <p className="font-bold text-primary">{user?.email}</p>
                     </div>
                   </>
                 </li>
               )}
-              {/* <li>
-                <Link className="mx-4 font-bold" to="/dashboard">
+                <div class="divider">OR</div>
+              <li>
+                <Link className="b a w-full  my-1 mx-auto font-bold" to="/dashboard">
                   Dashboard
                 </Link>
-              </li> */}
-              <li>
-                <label
-                  for="my-drawer-2"
-                  class="btn btn-success px-5 mx-auto btn-sm w-28 drawer-button lg:hidden"
-                >
-                   Dashboard
-                </label>
               </li>
               <li>
-                <Link className="w-28 mx-auto font-bold " to="/dashboard/myProfile">
-                myProfile
+                <Link
+                  className="b a w-full  my-1 mx-auto font-bold "
+                  to="/dashboard/myProfile"
+                >
+                  myProfile
                 </Link>
               </li>
               <li>
-                <Link className="w-28 mx-auto font-bold " to="/dashboard/orders">
+                <Link
+                  className="b a w-full  my-1 mx-auto font-bold "
+                  to="/dashboard/orders"
+                >
                   Order
                 </Link>
               </li>
               <li>
-                <Link className="w-28 mx-auto font-bold " to="/dashboard/add/review">
+                <Link
+                  className="b a w-full  my-1 mx-auto font-bold "
+                  to="/dashboard/add/review"
+                >
                   Add review
                 </Link>
               </li>
-            
+
               <li>
                 {/* <button class="btn btn-xs">Tiny</button> */}
                 <button
                   onClick={() => logOut()}
-                  className="btn btn-xs btn-error mt-4 w-24 pb-6 mx-auto"
+                  className="btn btn-xs btn-error mb-4 mt-2 w-3/5 pb-6 mx-auto"
                 >
                   Logout
                 </button>
