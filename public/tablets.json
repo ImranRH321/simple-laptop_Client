@@ -1,0 +1,84 @@
+[
+    {
+        "id" : 1,
+      "name": "Lenovo TAB M8 (2nd Gen) 8' 2GB RAM 32GB Storage Android Tablet",
+      "img": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/lenovo/tab-m8-01-228x228.jpg",
+      "resolution": "8 IPS HD (1280 x 800) LCD Display",
+      "display": "8MP rear & 2MP front Camera",
+      "ports": "Ports: VGA",
+      "Features": "Android v9 Pie operating system",
+      "description": "The New Lenovo Tab M8 (2nd Gen) designed with good style and design. This TAB is built in 8.15mm thin, with a metal back cover and rounded edges, this tablet feels great in your hands and exudes elegance. This Tablet brings an 8â€³ IPS HD (1280 x 800) LCD touchscreen display that uses 82% of the tabletâ€™s surface area for seamless visuals, and a Dolby Audio tuned speaker. This one-two punch of visual and audio pleasure makes streaming your favorite videos and playing mobile games even more enjoyable. This new TAB comes with Android 9 Pie, a quad-core processor, and a battery that provides up to 18 hours of web browsing, the Tab M8 (2nd Gen) is your key to nonstop entertainment. Watch videos, check social media, listen to music, and so much moreâ€”this tablet delivers. This Tab M8 (2nd Gen)â€™s TUV certified display cuts back blue light thatâ€™s potentially damaging to eyesight, especially for growing children. The new Lenovo TAB M8 comes with 01 year warranty.",
+      "minimumQuantity": 20,
+      "availableQuantity": 200,
+      "price": "17000"
+    },
+  
+    {
+        "id": 2,
+      "name": "Amazon Fire HD 8 Quad Core 8' Display Tablet with Alexa",
+      "img": "https://www.startech.com.bd/image/cache/catalog/tablet/amazon/fire-8/fire-hd-8-228x228.jpg",
+      "resolution": "Type IPS LCD capacitive touchscreen",
+      "display": "Size 7.0 inches",
+      "ports": "RAM: 2 GB",
+      "Features": "ROM: 32 GB",
+      "description": "Enjoy your entertainment with a fast 1.3 GHz quad-core processor. Fire HD 8 offers 50% more RAM than Fire 7 for faster performance. Fire HD 8 features a 1280 x 800 high-definition display with over a million pixels (189 PPI) and a bright, vivid picture. Enjoy movies and games in a crisp, clear HD resolution, with less glare and more brightness thanks to a stunning IPS (in-plane-switching) LCD display. With 2x more internal storage than Fire 7, Fire HD 8 comes standard with 32 GB. Expand your tabletâ€™s storage by up to 400 GB using a microSD card, and keep photos, movies, and compatible games and apps with you. Plus enjoy free unlimited cloud storage for all your Amazon content and photos taken with your Fire tablet. Fire HD 8 features a 2 MP rear-facing camera for taking photos or shooting 720p video. With up to 12 hours of mixed-use battery life, Fire HD 8 gives you the flexibility to go where the day takes you. Amazon engineers Fire tablets to hold up against everyday life. We put the Fire HD 8 through over 50 tests to replicate drops, tumbles, spills, and other everyday wear and tear. It has no warranty.",
+      "minimumQuantity": 20,
+      "availableQuantity": 200,
+      "price": "12500"
+    },
+    {
+        "id": 3,
+      "name": "Walton Walpad 10P Tablet",
+      "img": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/walton/walpad-10p/walpad-10p-001-228x228.jpg",
+      "resolution": "Helio P60 Octa-Core Processor",
+      "display": "10.5inch FHD (1920x1200) IPS",
+      "ports": "6GB LPDDR4 RAM, 128GB Storage",
+      "Features": "7000 mAh Battery, 4G Network",
+      "description": "Walton Walpad 10P Tablet comes with Helio P60 Octa-Core Processor, 6GB LPDDR4 RAM, 128GB Storage. The WALPAD 10P is designed to be portable and durable with its 510g lightweight. It designed with slim, sleek and pure body design. This TAB is featured with 10.5-inch display, full-viewing angle and minimized bezel for maximizing your viewing-ability. 1920x1200 resolution, 480 nits brightness, 60 Hz refreshing rate & 92% DCI-P3 color gamut. This Walton Tablet PC 8MP rear and 5MP Front auto focusing camera for sharp, colorful and details even at low light environment.",
+      "minimumQuantity": 20,
+      "availableQuantity": 200,
+      "price": "9300"
+    },
+  
+    {
+        "id": 4,
+      "name": "Lenovo Tab M10 2GB RAM 32GB Storage Wi-Fi 4G LTE 10-Inch Tablet",
+      "img": "https://www.startech.com.bd/image/cache/catalog/tablet-pc/lenovo/tab-m10/tab-m10-0001-228x228.jpg",
+      "resolution": "CPU Type: Mediatek MT6762 Helio P22T (12 nm)",
+      "display": "2GB RAM, 32GB ROM (Storage)",
+      "ports": "Resolution: 800 x 1280 pixels",
+      "Features": "Battery: Li-Pro 5100mAh/19.7Wht",
+      "description": "Lenovo Tab M10 2GB RAM 32GB Storage Wi-Fi 4G LTE 10-inch TabletTreat your eyes to something truly special. The Tab M10's 10.1' HD display captures everything from the intensity of an action scene to the beautiful details in family photos. At just 8.1 mm thin and 480 g, the Tab M10 is a delight to hold and fits easily into your satchel or backpack. It's built to be taken anywhere without weighing you down. Immerse yourself in booming sound when you enjoy music, movies, shows, and videos. Its dual front speakers and Dolby Atmos support mean you can enjoy a theater-like audio experience wherever you go. Add in the optional Kidâ€™s Pack to keep your childrenâ€”and your deviceâ€”safe, thanks to a custom shock-resistant bumper and special kidâ€™s mode that features up-to-date and curated childrenâ€™s content. The Lenovo Tab M10 Tablet has a 1-year warranty.",
+      "minimumQuantity": 20,
+      "availableQuantity": 200,
+      "price": "10200"
+    },
+  
+    {
+     "id": 5,
+      "name": "Lenovo Tab M10 4GB RAM 64GB Storage Wi-Fi 4G LTE 10-inch Tablet",
+      "img": "https://www.startech.com.bd/image/cache/catalog/tablet/lenovo/tab-m10/m10-grey-228x228.jpg",
+      "resolution": "HD (1366 x 766)",
+      "display": "CPU Type: Mediatek MT6762 Helio P22T (12 nm)",
+      "ports": "Resolution: 800 x 1280 pixels",
+      "Features": "4GB RAM, 64GB ROM",
+      "description": "Treat your eyes to something truly special. The Tab M10's 10.1' HD display captures everything from the intensity of an action scene to the beautiful details in family photos. At just 8.1 mm thin and 480 g, the Tab M10 is a delight to hold and fits easily into your satchel or backpack. It's built to be taken anywhere without weighing you down. Immerse yourself in booming sound when you enjoy music, movies, shows, and videos. Its dual front speakers and Dolby Atmos support mean you can enjoy a theater-like audio experience wherever you go. Add in the optional Kidâ€™s Pack to keep your childrenâ€”and your deviceâ€”safe, thanks to a custom shock-resistant bumper and special kidâ€™s mode that features up-to-date and curated childrenâ€™s content. The Lenovo Tab M10 Tablet has a 1-year warranty.",
+      "minimumQuantity": 20,
+      "availableQuantity": 200,
+      "price": "29300"
+    },
+    {
+        "id": 6,
+      "name": "Xiaomi Pad 5 Snapdragon 860 6GB RAM 128GB ROM 11' WQHD+ Tablet",
+      "img": "https://www.startech.com.bd/image/cache/catalog/Tablet/Xiaomi/pad-5/xiaomi-pad-5-228x228.jpg",
+      "resolution": "HD (1366 x 766)",
+      "display": "11' WQHD+ (1600 x 2560) 120Hz 500nits",
+      "ports": "Processor: Qualcomm Snapdragon 860",
+      "Features": "RAM: 6GB, ROM: 128GB",
+      "description": "Xiaomi Mi Pad 5 is officially released on Aug. 10, 2021. The dimension of the device is 254.7 x 166.3 x 6.9 mm and it weighs 511 grams. The smartphone includes Accelerometer, gyro, proximity, and compass. The tablet supports USB Type-C, and Bluetooth 5.0. It is fueled by a Non-removable Li-Po 8720 mAh battery + Fast charging 33W + Power Delivery 3.0. Xiaomi Mi Pad 5 runs on Android 11 + MIUI 12.5 operating system providing smooth operation of the device. The tablet is available in different colors like Black, White, and Green. Moreover, it is powered by the Qualcomm Snapdragon 860 processor while the GPU is Adreno 640. The size of the tablet is 11.0 inches and it comes with IPS LCD, 1B colors, 120Hz, HDR10, Dolby Vision display. The resolution of the device is 1600 x 2560 pixels with 274 PPI. It is pack with 6 GB RAM with 128 GB  internal storage options. The device is pack with a 13 MP camera while on the front, there is an 8 MP camera available for clicking selfies. It comes with a 1-year warranty.",
+      "minimumQuantity": 20,
+      "availableQuantity": 200,
+      "price": "14000"
+    }
+  ]
+  
