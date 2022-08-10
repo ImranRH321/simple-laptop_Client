@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { useUpdateProfile, useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../hooks/useFirebase";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import Loading from "../Shared/Loading";
+import { async } from "@firebase/util";
 
 const MyProfile = () => {
   const [user] = useAuthState(auth);
@@ -17,6 +18,8 @@ const MyProfile = () => {
   const [upload, setUpload] = useState({});
   const [more, setMore] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [image, setImage] = useState(user?.photoURL);
+  const [updateProfile, updating, error] = useUpdateProfile(auth);
 
   if (loading) {
     <Loading></Loading>;
@@ -41,7 +44,7 @@ const MyProfile = () => {
         if (result.success) {
           const img = result.data.url;
           console.log(img);
-          const updateProfile = {
+          const Profile = {
             name: user?.displayName,
             email: user?.email,
             img: img,
@@ -50,16 +53,17 @@ const MyProfile = () => {
             education: data.education,
           };
           //
-          console.log(updateProfile);
+          setImage(img);
           // send data server
           fetch(`http://localhost:5000/profile/${user?.email}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify(updateProfile),
+            body: JSON.stringify(Profile),
           })
             .then(res => res.json())
-            .then(data => {
+            .then(async data => {
               console.log("server response", data);
+              await updateProfile({ photoURL: img });
               // form reset
               // toast use for
               toast.success("successfully updated");
@@ -72,13 +76,14 @@ const MyProfile = () => {
         }
       });
   };
-
+  // console.log(user);
+  // console.log("updating", updating);
   //=============== load upload data==============
   useEffect(() => {
     fetch(`http://localhost:5000/profile?email=${user?.email}`)
       .then(res => res.json())
       .then(data => {
-        console.log('load data', data);
+        console.log("load data", data);
         setUpload(data);
       });
   }, []);
