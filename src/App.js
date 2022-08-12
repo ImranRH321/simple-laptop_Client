@@ -26,6 +26,7 @@ import TabletDetails from "./templete1/Tablets/TabletDetails";
 import MyProfileParent from "./templete1/Dashboard/MyProfileParent";
 import AddProduct from "./templete1/Dashboard/AddProduct";
 
+
 function App() {
   return (
     <div className="App">

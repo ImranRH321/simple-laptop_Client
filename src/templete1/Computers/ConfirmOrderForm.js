@@ -31,7 +31,7 @@ console.log(toolDetail);
     } 
  console.log('order--------> ', order);
     /* send to the server  */
-    fetch('http://localhost:5000/order', {
+    fetch('https://laptop-1997.herokuapp.com/order', {
       method: 'POST',
       headers: {'content-type': 'application/json'},
       body: JSON.stringify(order)

@@ -10,13 +10,12 @@ import TabletsSlider from './TabletsSlider';
 const Home = () => {
     return (
         <div>
-            <h1>Thome is </h1>
             <Banner></Banner>
-            <Review></Review>
+            <TabletsSlider></TabletsSlider>
             <Computers></Computers>
             <Experience></Experience>
-            {/* <Monitors></Monitors> */}
-            <TabletsSlider></TabletsSlider>
+            <Monitors></Monitors>
+            <Review></Review>
             <Footer></Footer>
         </div>
     );

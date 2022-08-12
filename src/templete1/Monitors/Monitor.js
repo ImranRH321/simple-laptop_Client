@@ -6,7 +6,7 @@ const Monitor = ({ monitorProduct }) => {
     monitorProduct;
   // console.log(monitorProduct);
   return (
-    <div class="card w-96 bg-base-100 shadow-xl mx-auto">
+    <div class="card w-96 sm:w-full sm:mx-5 bg-base-600 shadow-xl mx-auto border-gray-400">
       <figure>
         <img className="h-[250x] w-full" src={img} alt="Shoes" />
       </figure>
@@ -16,7 +16,8 @@ const Monitor = ({ monitorProduct }) => {
           {name.slice(0, 30)}
         </h2>
         <h2 class="card-title">
-          Price: <span className="text-2xl text-black">{price} টাকা</span>
+          Price:{" "}
+          <span className="text-2xl text-black sm:text-md">{price} টাকা</span>
         </h2>
         <h2 class="card-title text-sm text-black">Display: {display}</h2>
         <h2 class="card-title text-sm text-black">Ports: {ports}</h2>

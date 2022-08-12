@@ -16,7 +16,7 @@ Confirm form a data pate hobe and save korte database
 ===================
 */
   useEffect(() => {
-    const url = `http://localhost:5000/monitor/${toolId}`;
+    const url = `https://laptop-1997.herokuapp.com/monitor/${toolId}`;
     console.log(url);
     fetch(url)
       .then(res => res.json())

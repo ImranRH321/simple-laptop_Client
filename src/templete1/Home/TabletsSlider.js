@@ -21,7 +21,7 @@ const TabletsSlider = () => {
 
   // load data Tablets
   useEffect(() => {
-    fetch("http://localhost:5000/tablet")
+    fetch("https://laptop-1997.herokuapp.com/tablet")
       .then(res => res.json())
       .then(data => {
         console.log(data);

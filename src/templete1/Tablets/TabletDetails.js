@@ -8,7 +8,7 @@ const TabletDetails = () => {
   const [toolDetail, setToolsDetail] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/tablet/${toolId}`)
+    fetch(`https://laptop-1997.herokuapp.com/tablet/${toolId}`)
       .then(res => res.json())
       .then(data => {
         console.log('data', data);

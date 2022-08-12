@@ -14,7 +14,7 @@ const Orders = () => {
     isLoading,
     refetch,
   } = useQuery(["order"], () =>
-    fetch(`http://localhost:5000/order/${email}`).then(res => res.json())
+    fetch(`https://laptop-1997.herokuapp.com/order/${email}`).then(res => res.json())
   );
 
   if (isLoading) return "Loading...";

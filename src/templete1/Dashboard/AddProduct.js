@@ -44,7 +44,7 @@ const AddProduct = () => {
           //
           console.log('addproduct', addProduct);
           // send data server
-          fetch(`http://localhost:5000/addProduct`, {
+          fetch(`https://laptop-1997.herokuapp.com/addProduct`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(addProduct),

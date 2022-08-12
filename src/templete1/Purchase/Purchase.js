@@ -9,7 +9,7 @@ const Purchase = () => {
   const [toolDetail, setToolsDetail] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/computer/${toolId}`)
+    fetch(`https://laptop-1997.herokuapp.com/computer/${toolId}`)
       .then(res => res.json())
       .then(data => {
         console.log('data', data);

@@ -1,7 +1,7 @@
 [
   {
     "name": "Acer EB192Q 18.5 Inch HD Monitor",
-    "img": "https://www.startech.com.bd/image/cache/catalog/monitor/acer/eb192q/eb192q-01-228x228.jpg",
+    "img": "https://i.ibb.co/BwF5Djm/monitor1.jpg",
     "resolution": "HD (1366 x 768)",
     "display": "Display: TN, 60Hz, 5ms",
     "ports": "Ports: VGA",
@@ -14,7 +14,7 @@
 
   {
     "name": "Dell E1916HV 18.5 Inch LED Monitor (VGA)",
-    "img": "https://www.startech.com.bd/image/cache/catalog/monitor/philips/193v/193v-228x228.png",
+    "img": "https://i.ibb.co/GTCkF1z/monitor2.jpg",
     "resolution": "HD (1366 x 766)",
     "display": "TN, 60Hz, 5ms",
     "ports": "VGA",
@@ -26,7 +26,7 @@
   },
   {
     "name": "Philips 18.5' 193V5LHSB2 LED Monitor with HDMI",
-    "img": "https://www.startech.com.bd/image/cache/data/MONITOR/DELL22/dell-e1914h-228x228.jpg",
+    "img": "https://i.ibb.co/khL7YVN/monitor3.jpg",
     "resolution": "HD (1366 x 766)",
     "display": "TFT-LCD, 60Hz, 5ms",
     "ports": "HDMI, VGA",
@@ -39,7 +39,7 @@
 
   {
     "name": "Lenovo D19-10 18.5 Inch HD HDMI VGA Monitor",
-    "img": "https://www.startech.com.bd/image/cache/catalog/monitor/lenovo/d19-10/d19-10-01-228x228.jpg",
+    "img": "https://i.ibb.co/syHPTKT/monitor4.jpg",
     "resolution": "HD (1366 x 766)",
     "display": "IPS, 60Hz, 5ms",
     "ports": "HDMI, VGA",
@@ -52,7 +52,7 @@
 
   {
     "name": "Dell D1918H 18.5 Inch LED Monitor (VGA, HDMI)",
-    "img": "https://www.startech.com.bd/image/cache/catalog/monitor/dell/d1918h/d1918h-01-228x228.jpg",
+    "img": "https://i.ibb.co/yQtyypT/monitor5.png",
     "resolution": "HD (1366 x 766)",
     "display": "LED, 60Hz, 5ms",
     "ports": "HDMI, VGA",
@@ -64,7 +64,7 @@
   },
   {
     "name": "Dell SE2222H 21.5' FHD Monitor",
-    "img": "https://www.startech.com.bd/image/cache/catalog/monitor/dell/se2222h/se2222h-01-228x228.jpg",
+    "img": "https://i.ibb.co/dbm6kLt/monitor6.jpg",
     "resolution": "HD (1366 x 766)",
     "display": "LED, 60Hz, 5ms",
     "ports": "HDMI, VGA",
@@ -76,7 +76,7 @@
   },
   {
     "name": "PHILIPS 18.5' 193V5LSB2 LED MONITOR",
-    "img": "https://www.startech.com.bd/image/cache/catalog/monitor/philips/193v/193v-228x228.png",
+    "img": "https://i.ibb.co/1zfNYBz/monitor7.jpg",
     "resolution": "HD (1366 x 766)",
     "display": "LED, 60Hz, 5ms",
     "ports": "HDMI, VGA",
@@ -88,7 +88,7 @@
   },
   {
     "name": "BenQ GW2280 22; Eye-care Stylish Full HD LED Monitor",
-    "img": "https://www.startech.com.bd/image/cache/catalog/monitor/benq/gw2283/gw2283-228x228.jpg",
+    "img": "https://i.ibb.co/71GtfkN/monitor8.jpg",
     "resolution": "HD (1366 x 766)",
     "display": "LED, 60Hz, 5ms",
     "ports": "HDMI, VGA",

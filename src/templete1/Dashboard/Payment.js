@@ -13,7 +13,7 @@ const Payment = () => {
   const [product, setProduct] = useState({});
   //
   useEffect(() => {
-    fetch(`http://localhost:5000/payment/order/${id}`, {
+    fetch(`https://laptop-1997.herokuapp.com/payment/order/${id}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("token")}`,

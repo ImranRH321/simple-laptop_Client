@@ -4,7 +4,7 @@ import Tablet from "./Tablet";
 const Tablets = () => {
   const [tablets, setTablets] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/tablet")
+    fetch("https://laptop-1997.herokuapp.com/tablet")
       // fetch('tablets.json')
       .then(res => res.json())
       .then(data => {
@@ -18,7 +18,7 @@ const Tablets = () => {
         Tablets  <span className="text-warning"> Service</span>{" "}
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-auto gap-5">
+      <div className="grid grid-cols-1 sm:gap-4 sm:grid-cols-2 md:grid-cols-3  gap-5 ">
         {tablets.map(tablet => (
           <Tablet tablet={tablet} key={tablet._id}></Tablet>
         ))}

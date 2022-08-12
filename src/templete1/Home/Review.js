@@ -24,7 +24,7 @@ const Review = () => {
     isLoading,
     refetch,
   } = useQuery(["ratting"], () =>
-    fetch("http://localhost:5000/ratting").then(res => res.json())
+    fetch("https://laptop-1997.herokuapp.com/ratting").then(res => res.json())
   );
 
   if (isLoading) return "Loading...";

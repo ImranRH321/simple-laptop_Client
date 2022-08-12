@@ -4,7 +4,6 @@ import auth from "../../hooks/useFirebase";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import Loading from "../Shared/Loading";
-import { async } from "@firebase/util";
 
 const MyProfile = () => {
   const [user] = useAuthState(auth);
@@ -18,7 +17,7 @@ const MyProfile = () => {
   const [upload, setUpload] = useState({});
   const [more, setMore] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [image, setImage] = useState(user?.photoURL);
+  const [images, setImages] = useState(user?.photoURL);
   const [updateProfile, updating, error] = useUpdateProfile(auth);
 
   if (loading) {
@@ -53,9 +52,9 @@ const MyProfile = () => {
             education: data.education,
           };
           //
-          setImage(img);
+          setImages(img);
           // send data server
-          fetch(`http://localhost:5000/profile/${user?.email}`, {
+          fetch(`https://laptop-1997.herokuapp.com/profile/${user?.email}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(Profile),
@@ -64,8 +63,6 @@ const MyProfile = () => {
             .then(async data => {
               console.log("server response", data);
               await updateProfile({ photoURL: img });
-              // form reset
-              // toast use for
               toast.success("successfully updated");
               setMore(true);
               //
@@ -80,7 +77,7 @@ const MyProfile = () => {
   // console.log("updating", updating);
   //=============== load upload data==============
   useEffect(() => {
-    fetch(`http://localhost:5000/profile?email=${user?.email}`)
+    fetch(`https://laptop-1997.herokuapp.com/profile?email=${user?.email}`)
       .then(res => res.json())
       .then(data => {
         console.log("load data", data);
@@ -89,7 +86,6 @@ const MyProfile = () => {
   }, []);
 
   console.log(upload);
-  // console.log("more", more);
 
   return (
     <div className="my-4">

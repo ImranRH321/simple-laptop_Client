@@ -4,7 +4,7 @@ import Monitor from "./Monitor";
 const Monitors = () => {
   const [monitors, setMonitors] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/monitor")
+    fetch("https://laptop-1997.herokuapp.com/monitor")
       .then(res => res.json())
       .then(data => {
         // console.log(data);
@@ -17,7 +17,7 @@ const Monitors = () => {
         Monitors <span className="text-warning"> Service</span>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3  gap-5">
+      <div className="grid grid-cols-1 sm:gap-4 sm:grid-cols-2 md:grid-cols-3  gap-5 ">
         {monitors.map(monitorProduct => (
           <Monitor
             monitorProduct={monitorProduct}

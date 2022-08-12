@@ -6,7 +6,7 @@ const User = ({ user, ind, refetch }) => {
   const { name, email, role, _id } = user;
 
   const handleAdmin = () => {
-    fetch(`http://localhost:5000/user/${email}`, {
+    fetch(`https://laptop-1997.herokuapp.com/user/${email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -27,7 +27,7 @@ const User = ({ user, ind, refetch }) => {
   // 
   const userHandleDelete = () => {
     alert( _id);
-    fetch(`http://localhost:5000/user/${_id}`, {
+    fetch(`https://laptop-1997.herokuapp.com/user/${_id}`, {
       method: "DELETE"
     })
       .then(res => res.json())

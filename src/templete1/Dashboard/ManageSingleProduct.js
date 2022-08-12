@@ -18,7 +18,7 @@ const ManageSingleProduct = ({ data, i, refetch }) => {
   // console.log(data);
   //
   const handleProductDeleted = () => {
-    fetch(`http://localhost:5000/manageOrder/${_id}`, {
+    fetch(`https://laptop-1997.herokuapp.com/manageOrder/${_id}`, {
       method: "DELETE",
     })
       .then(res => res.json())
@@ -33,7 +33,7 @@ const ManageSingleProduct = ({ data, i, refetch }) => {
 
   /* payOut status change */
   const handlePayOutButton = () => {
-    fetch(`http://localhost:5000/managePayOut/${_id}`, {
+    fetch(`https://laptop-1997.herokuapp.com/managePayOut/${_id}`, {
       method: "PATCH",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ status }),

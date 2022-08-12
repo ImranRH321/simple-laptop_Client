@@ -4,7 +4,7 @@ import Computer from "./Computer";
 const Computers = () => {
   const [computers, setComputers] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/computer")
+    fetch("https://laptop-1997.herokuapp.com/computer")
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -18,7 +18,7 @@ const Computers = () => {
         <span className="text-secondary"> Service</span>{" "}
       </h1>
       <div class="divider w-[350px] mx-auto mb-10">OR</div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-3  gap-5 ">
+      <div className="grid grid-cols-1 sm:gap-4 sm:grid-cols-2 md:grid-cols-3  gap-5 ">
         {computers?.slice(0, 6).map(tool => (
           <Computer tool={tool} key={tool._id}></Computer>
         ))}

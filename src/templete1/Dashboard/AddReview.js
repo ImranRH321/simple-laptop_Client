@@ -18,39 +18,39 @@ const AddReview = () => {
     //
     const textInp = e.target.text.value;
     if (!useValue) {
-     toast.error('Gave me Star please !!!')
-    }
-    else if(!textInp){
+      toast.error("Gave me Star please !!!");
+    } else if (!textInp) {
       toast.error("Mama same for text flied ");
       return;
-    }
-    else {
+    } else {
       const ratting = {
         stars: useValue,
         text: textInp,
         name: user.displayName,
         email: user.email,
-        img: user?.photoURL
+        img: user?.photoURL,
       };
       // console.log(ratting);
-      fetch('http://localhost:5000/rating', {
-        method: 'POST',
-        headers: {'content-type': 'application/json'} ,
-        body: JSON.stringify(ratting)
+      fetch("https://laptop-1997.herokuapp.com/rating", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(ratting),
       })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        if(data.insertedId){
-          toast.success("ratting done home page see now");
-          e.target.reset()
-        }
-      })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          if (data.insertedId) {
+            toast.success("ratting done home page see now");
+            e.target.reset();
+          }
+        });
     }
   };
   return (
     <div className="grid grid-cols-1">
-      <h2 className="text-4xl text-center mt-4 font-bold text-purple-600">Add review here </h2>
+      <h2 className="text-4xl text-center mt-4 font-bold text-purple-600">
+        Add review here{" "}
+      </h2>
       <div className="text-center w-50 mx-auto my-4">
         <ReactStars
           count={5}

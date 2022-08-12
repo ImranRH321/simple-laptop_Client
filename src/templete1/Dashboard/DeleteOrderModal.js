@@ -5,7 +5,7 @@ const DeleteOrderModal = ({ modalOrder, refetch }) => {
   const { productName, _id } = modalOrder;
 
   const makeDelete = () => {
-    const url = `http://localhost:5000/order/${_id}`;
+    const url = `https://laptop-1997.herokuapp.com/order/${_id}`;
     fetch(url, {
       method: "DELETE",
     })
