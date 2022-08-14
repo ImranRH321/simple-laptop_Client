@@ -35,7 +35,7 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
   //  user
   if (token) {
-    console.log("user", user, gUser);
+    // console.log("user", user, gUser);
     navigate(from, { replace: true });
   }
 
@@ -148,10 +148,10 @@ const Login = () => {
           <div class="divider text-black">OR</div>
           <button
             onClick={() => signInWithGoogle()}
-            class="btn btn-success mx-auto  text-2xl"
+            class="btn bg-success mx-auto  text-2xl"
           >
-            {/* <i class="fa-brands fa-google"></i> */}
-            Google signIn
+            <i class="fa-brands fa-google"></i>
+            
           </button>
         </div>
       </div>

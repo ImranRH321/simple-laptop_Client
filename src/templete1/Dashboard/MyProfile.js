@@ -15,7 +15,6 @@ const MyProfile = () => {
   } = useForm();
   const [agree, setAgree] = useState(false);
   const [upload, setUpload] = useState({});
-  const [more, setMore] = useState(false);
   const [loading, setLoading] = useState(true);
   const [images, setImages] = useState(user?.photoURL);
   const [updateProfile, updating, error] = useUpdateProfile(auth);
@@ -23,7 +22,7 @@ const MyProfile = () => {
   if (loading) {
     <Loading></Loading>;
   }
-  // console.log(agree);
+  
 
   // ================Send-server==============
   const imgStoreKey = "428322d13b73eac9cb47c3c4911691c0";
@@ -42,7 +41,7 @@ const MyProfile = () => {
       .then(async result => {
         if (result.success) {
           const img = result.data.url;
-          console.log(img);
+          // console.log(img);
           const Profile = {
             name: user?.displayName,
             email: user?.email,
@@ -61,10 +60,9 @@ const MyProfile = () => {
           })
             .then(res => res.json())
             .then(async data => {
-              console.log("server response", data);
+              // console.log("server response", data);
               await updateProfile({ photoURL: img });
               toast.success("successfully updated");
-              setMore(true);
               //
               reset();
               window.location.reload();
@@ -73,19 +71,17 @@ const MyProfile = () => {
         }
       });
   };
-  // console.log(user);
-  // console.log("updating", updating);
   //=============== load upload data==============
   useEffect(() => {
     fetch(`https://laptop-1997.herokuapp.com/profile?email=${user?.email}`)
       .then(res => res.json())
       .then(data => {
-        console.log("load data", data);
+        // console.log("load data", data);
         setUpload(data);
       });
   }, []);
 
-  console.log(upload);
+  // console.log(upload);
 
   return (
     <div className="my-4">
@@ -99,20 +95,20 @@ const MyProfile = () => {
       <div class="divider"></div>
 
       {/* new code  */}
-
+      
       {!agree ? (
         <div className="grid grid-cols-2 md-grid cols-2">
           <div>
-            one
+            
             <img
-              class="mask mask-circle w-[200px] mx-auto"
+              class="mask mask-circle w-[200px] mx-auto my-5"
               // src={user?.photoURL}
-              src={upload?.img}
+              src={user.photoURL}
               alt=""
             />
           </div>
           <div>
-            tow
+            
             <label className="text-start px-2 input-bordered w-full max-w-xs font-bold text-sm">
               Full Name
             </label>

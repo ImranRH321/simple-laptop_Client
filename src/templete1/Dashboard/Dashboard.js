@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
+import { AdminContext } from "../../App";
 import useAdmin from "../../hooks/useAdmin";
 import auth from "../../hooks/useFirebase";
 import "../Style/Style.css";
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
-  const [isAdmin] = useAdmin(user);
+
+//  context code here
+const [isAdmin,setIsAdmin] = useContext(AdminContext)
+console.log(isAdmin);
 
   return (
     <div class="drawer drawer-mobile">
@@ -20,19 +24,6 @@ const Dashboard = () => {
         <label for="my-drawer-2" class="drawer-overlay"></label>
         <ul class="menu p-4 overflow-y-auto w-80  p  text-base-content">
           {/* <!-- Sidebar content here --> */}
-
-          {/* <div className="border-red-300">
-            <img
-              class="mask mask-circle w-24 mx-auto"
-              src={user?.photoURL}
-              alt=""
-            />
-            <p className="font-bold">
-              <span>{user?.displayName}</span>
-              <br />
-              <span>{user?.email}</span>
-            </p>
-          </div> */}
           <li>
             <Link className="d" to="/dashboard">
               Dashboard Banner
@@ -43,44 +34,38 @@ const Dashboard = () => {
               MyProfile
             </Link>
           </li>
-          <li>
-            <Link className="d" to="/dashboard/orders">
-              Orders
-            </Link>
-          </li>
-          <li>
-            <Link className="d" to="/dashboard/add/review">
-              addReview
-            </Link>
-          </li>
-          <li>
-            <Link className="d" to="/dashboard/manageOrder">
-              ManageOrder
-            </Link>
-          </li>
-          <li>
-            <Link className="d" to="/dashboard/addProduct">
-              AddProduct
-            </Link>
-          </li>
-          <li>
-            <Link className="d" to="/dashboard/makeAdmin">
-              makeAdmin
-            </Link>
-          </li>
+
           {/* pore route gula tik korbo */}
-          {isAdmin && (
+          {isAdmin ? (
             <>
+              <li>
+                <Link className="d" to="/dashboard/manageOrder">
+                  ManageOrder
+                </Link>
+              </li>
               <li>
                 <Link className="d" to="/dashboard/makeAdmin">
                   makeAdmin
                 </Link>
               </li>
-              {/* <li>
-                <Link className="d" to="/dashboard/manageOrder">
-                  ManageOrder
+              <li>
+                <Link className="d" to="/dashboard/addProduct">
+                  AddProduct
                 </Link>
-              </li> */}
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link className="d" to="/dashboard/orders">
+                  Orders
+                </Link>
+              </li>
+              <li>
+                <Link className="d" to="/dashboard/add/review">
+                  addReview
+                </Link>
+              </li>
             </>
           )}
         </ul>

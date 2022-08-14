@@ -13,30 +13,15 @@ const Main = () => {
           <div>
             <img
               class="mask mask-circle w-24 mx-auto"
-              src="https://i.gifer.com/HAxG.gif"
+              src="https://i.gifer.com/Ry6p.gif"
               alt=""
             />
             {/* <h1 class="text-5xl font-bold text-center">{user?.displayName}</h1> */}
           </div>
           <div>
-            {/* <img class="mask mask-circle w-24 mx-auto" src={user?.photoURL} alt="" /> */}
-            <img
-              class="mask mask-circle w-24 mx-auto"
-              src="https://c.tenor.com/xiKHylkwj7EAAAAM/reaktratorisgeil-legend.gif"
-              alt=""
-            />
-          </div>
-          <div>
             <img
               class="mask mask-circle w-24 mx-auto"
               src={user?.photoURL}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              class="mask mask-circle w-24 mx-auto"
-              src="https://c.tenor.com/uQNoWGXo9VwAAAAd/profile-picture-discord.gif"
               alt=""
             />
           </div>

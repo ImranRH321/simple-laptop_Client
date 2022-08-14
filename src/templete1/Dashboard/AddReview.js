@@ -38,7 +38,7 @@ const AddReview = () => {
       })
         .then(res => res.json())
         .then(data => {
-          console.log(data);
+          // console.log(data);
           if (data.insertedId) {
             toast.success("ratting done home page see now");
             e.target.reset();

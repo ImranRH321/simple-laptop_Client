@@ -29,7 +29,7 @@ console.log(toolDetail);
       quantity: data.quantity,
       price: inpPrice
     } 
- console.log('order--------> ', order);
+//  console.log('order--------> ', order);
     /* send to the server  */
     fetch('https://laptop-1997.herokuapp.com/order', {
       method: 'POST',
@@ -49,6 +49,7 @@ console.log(toolDetail);
 
   return (
     <div className="my-5">
+      <h1 className="text-center text-2xl text-primary">Confirm Order Product</h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="grid grid-cols-1 gap-4 justify-items-center "
@@ -96,7 +97,7 @@ console.log(toolDetail);
         <input
           type="submit"
           value="Order"
-          class="input btn-success text-black font-bold text-2xl input-bordered w-full max-w-xs"
+          class="input btn-secondary text-white font-bold text-2xl input-bordered w-full max-w-xs"
         />
       </form>
     </div>

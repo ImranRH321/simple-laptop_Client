@@ -31,7 +31,7 @@ const AddProduct = () => {
       .then(async result => {
         if (result.success) {
           const img = result.data.url;
-          console.log(img);
+          // console.log(img);
 
           const addProduct = {
             name: data.name,
@@ -42,7 +42,7 @@ const AddProduct = () => {
             description: data.description
           };
           //
-          console.log('addproduct', addProduct);
+          // console.log('addproduct', addProduct);
           // send data server
           fetch(`https://laptop-1997.herokuapp.com/addProduct`, {
             method: "POST",
@@ -51,7 +51,6 @@ const AddProduct = () => {
           })
             .then(res => res.json())
             .then(data => {
-              console.log("server response", data);
               if(data.insertedId){
                 toast.success("successfully added");
               //

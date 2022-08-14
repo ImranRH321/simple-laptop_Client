@@ -1,16 +1,22 @@
 import { signOut } from "firebase/auth";
-import React from "react";
+import React, { useContext } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import { AdminContext } from "../../App";
+import useAdmin from "../../hooks/useAdmin";
 import auth from "../../hooks/useFirebase";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
-  console.log(user);
+  // console.log(user);
   const logOut = () => {
     localStorage.removeItem("token");
     signOut(auth);
   };
+
+  const [isAdmin, setIsAdmin] = useContext(AdminContext);
+  console.log(isAdmin);
+  //
 
   const menuItems = (
     <>
@@ -75,7 +81,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" class="text-2xl font-bold text-warning capitalize">
-          Laptop@Shorom
+          Laptop Iyeo
         </Link>
       </div>
       <div class="navbar-center hidden lg:flex">
@@ -113,70 +119,90 @@ const Navbar = () => {
               </div>
             </label>
           )}
-          {user && (
-            <ul
-              tabindex="1"
-              class="w-[260px] text-black bg-white menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box"
-            >
-              {user && (
-                <li>
-                  <>
-                    <div class="avatar grid grid-cols-1">
-                      <div class="w-24 rounded-full mx-auto bg-neutral-focus">
-                        <img
-                          className="w-50"
-                          src={user?.photoURL}
-                          alt="loading img"
-                        />
-                      </div>
-                      <p className="font-bold text-primary">{user?.displayName}</p>
-                      <p className="font-bold text-primary">{user?.email}</p>
-                    </div>
-                  </>
-                </li>
-              )}
-                <div class="divider">OR</div>
-              <li>
-                <Link className="b a w-full  my-1 mx-auto font-bold" to="/dashboard">
-                  Dashboard
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="b a w-full  my-1 mx-auto font-bold "
-                  to="/dashboard/myProfile"
-                >
-                  myProfile
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="b a w-full  my-1 mx-auto font-bold "
-                  to="/dashboard/orders"
-                >
-                  Order
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="b a w-full  my-1 mx-auto font-bold "
-                  to="/dashboard/add/review"
-                >
-                  Add review
-                </Link>
-              </li>
 
-              <li>
-                {/* <button class="btn btn-xs">Tiny</button> */}
-                <button
-                  onClick={() => logOut()}
-                  className="btn btn-xs btn-error mb-4 mt-2 w-3/5 pb-6 mx-auto"
-                >
-                  Logout
-                </button>
-              </li>
-            </ul>
-          )}
+          <ul
+            tabindex="1"
+            class="w-[260px] bg-purple-300 menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box"
+          >
+            <li>
+              <div class="avatar grid grid-cols-1">
+                <div class="w-24 rounded-full mx-auto bg-neutral-focus">
+                  <img
+                    className="w-50"
+                    src={user?.photoURL}
+                    alt="loading img"
+                  />
+                </div>
+                <p className="font-bold text-primary">{user?.displayName}</p>
+                <p className="font-bold text-primary">{user?.email}</p>
+              </div>
+            </li>
+            <hr className="my-2" />
+            <li>
+              <Link
+                className="b a w-3/4 my-1 mx-auto font-bold"
+                to="/dashboard"
+              >
+                Dashboard
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="b a w-3/4  my-1 mx-auto font-bold "
+                to="/dashboard/myProfile"
+              >
+                myProfile
+              </Link>
+            </li>
+            {/* ======================================= */}
+            {isAdmin ? (
+              <>
+                <li>
+                  <Link className="b a w-3/4  my-1 mx-auto font-bold " to="/dashboard/manageOrder">
+                    ManageOrder
+                  </Link>
+                </li>
+                <li>
+                  <Link className="b a w-3/4  my-1 mx-auto font-bold " to="/dashboard/makeAdmin">
+                    makeAdmin
+                  </Link>
+                </li>
+                <li>
+                  <Link className="b a w-3/4  my-1 mx-auto font-bold" to="/dashboard/addProduct">
+                    AddProduct
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link
+                    className="b a w-3/4 my-1 mx-auto font-bold "
+                    to="/dashboard/orders"
+                  >
+                    Order
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="b a w-3/4  my-1 mx-auto font-bold "
+                    to="/dashboard/add/review"
+                  >
+                    Add review
+                  </Link>
+                </li>
+              </>
+            )}
+            {/* ======================================= */}
+           {user && <li>
+              <button
+                onClick={() => logOut()}
+                className="btn btn-xs btn-error mb-4 mt-2 w-3/5 pb-6 mx-auto"
+              >
+                Logout
+              </button>
+            </li>}
+          </ul>
         </div>
       </div>
     </div>

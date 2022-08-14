@@ -44,7 +44,7 @@ const Register = () => {
           const img = result.data.url;
           await createUserWithEmailAndPassword(data.email, data.password);
           await updateProfile({ displayName: data.name, photoURL: img });
-          alert("Updated profile");
+          // alert("Updated profile");
           signOut(auth);
           navigate("/login");
         }
@@ -55,14 +55,13 @@ const Register = () => {
   //  jwt token
   const [token] = useToken(user || gUser);
 
-
   if (loading || gLoading) {
     return <Loading></Loading>;
   }
 
   //  user
   if (token) {
-    console.log("user", user, gUser);
+    // console.log("user", user, gUser);
     navigate("/login");
   }
 
@@ -205,7 +204,7 @@ const Register = () => {
               </div>
               {setError}
               <input
-                className="btn w-full max-w-xs  text-white capitalize"
+                className="btn w-full max-w-xs btn-primary  text-white capitalize"
                 type="submit"
                 value="Register"
               />
@@ -222,10 +221,9 @@ const Register = () => {
             <div class="divider mt-0">OR</div>
             <button
               onClick={() => signInWithGoogle()}
-              class="btn btn-success text-white mx-auto  text-2xl"
+              class="btn bg-primary text-white mx-auto  text-2xl"
             >
-              {/* <i class="fa-brands fa-google"></i>  */}
-              Google signIn
+              <i class="fa-brands fa-google"></i>
             </button>
           </div>
         </div>

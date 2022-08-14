@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import '../Style/Style.css'
 
 const TabletsSlider = () => {
   const [tablets, setTablets] = useState([]);
@@ -24,7 +25,7 @@ const TabletsSlider = () => {
     fetch("https://laptop-1997.herokuapp.com/tablet")
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        // console.log(data);
         setTablets(data);
       });
   }, []);
@@ -42,7 +43,7 @@ const TabletsSlider = () => {
           className="grid sm:grid-cols-1 md:grid-cols-3 gap-10 justify-items-center "
         >
           {tablets?.slice(-5).map(r => (
-            <div class="card w-96 bg-base-100 shadow-xl mx-auto m-5 py-10">
+            <div class="card w-96 cp shadow-xl mx-auto py-10">
               <div className="text-center">
                 <div className="w-9/12 text-center mx-auto">
                   <img class="w-full" src={r.img} alt="" />
@@ -67,10 +68,10 @@ const TabletsSlider = () => {
                 </h3>
                 <h3>
                   <Link
-                    className="btn btn-sm btn-success mx-4 font-bold"
+                    className="btn btn-sm bg-black text-secondary mx-4 font-bold"
                     to="/tablets"
                   >
-                    BayNow
+                    All Tablet
                   </Link>
                 </h3>
               </div>

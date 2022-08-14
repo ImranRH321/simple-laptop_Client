@@ -40,7 +40,7 @@ const ManageSingleProduct = ({ data, i, refetch }) => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log("manage", data);
+        // console.log("manage", data);
         refetch();
         if (data.deletedCount) {
           toast.success("Deleted user");

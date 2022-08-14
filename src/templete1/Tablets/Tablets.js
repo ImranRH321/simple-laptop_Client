@@ -8,14 +8,14 @@ const Tablets = () => {
       // fetch('tablets.json')
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        // console.log(data);
         setTablets(data);
       });
   }, []);
   return (
     <div>
-      <h1 className="text-5xl text-center my-5 font-bold  p-2">
-        Tablets  <span className="text-warning"> Service</span>{" "}
+      <h1 className="text-2xl text-center my-5 font-bold  p-2 text-primary ">
+        Tablets Service
       </h1>
 
       <div className="grid grid-cols-1 sm:gap-4 sm:grid-cols-2 md:grid-cols-3  gap-5 ">

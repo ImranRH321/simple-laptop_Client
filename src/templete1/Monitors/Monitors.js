@@ -13,11 +13,11 @@ const Monitors = () => {
   }, []);
   return (
     <div className="my-10">
-      <h1 className="text-5xl text-center mt-5 mb-2 font-bold bg-black text-secondary p-2">
-        Monitors <span className="text-warning"> Service</span>
+      <h1 className="text-5xl text-center text-primary  font-bold p-2 my-7">
+        Monitors Service
       </h1>
 
-      <div className="grid grid-cols-1 sm:gap-4 sm:grid-cols-2 md:grid-cols-3  gap-5 ">
+      <div className="grid grid-cols-1 sm:gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 ">
         {monitors.map(monitorProduct => (
           <Monitor
             monitorProduct={monitorProduct}

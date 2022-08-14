@@ -54,7 +54,7 @@ const CheckoutForm = ({ product }) => {
     });
 
     if (error) {
-      console.log(error);
+      // console.log(error);
       setCardError(error?.message);
     } else {
       setCardError("");
@@ -76,7 +76,7 @@ const CheckoutForm = ({ product }) => {
       setCardError(intenError?.message);
     } else {
       setCardError("");
-      console.log(paymentIntent);
+      // console.log(paymentIntent);
       setSuccess("Congrats you payment is completed");
       setTransaction(paymentIntent.id);
       // send the server
@@ -84,7 +84,7 @@ const CheckoutForm = ({ product }) => {
         id: _id,
         transactionId: paymentIntent.id,
       };
-      console.log(payment);
+      // console.log(payment);
       fetch(`https://laptop-1997.herokuapp.com/payment/${_id}`, {
         method: "PATCH",
         headers: {

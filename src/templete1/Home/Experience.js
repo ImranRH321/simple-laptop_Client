@@ -1,8 +1,9 @@
 import React from "react";
+import '../Style/Style.css'
 
 const Experience = () => {
   return (
-    <div className="h-[500px] bg-green-500 px-10 pb-3">
+    <div className="h-[500px] cp px-10 pb-3">
       <h1 className="text-primary text-center font-bold text-4xl md:text-6xl py-20">
         Explore Our Expariance
       </h1>

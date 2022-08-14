@@ -5,7 +5,7 @@ const Order = ({ order, setModalOrder }) => {
   const { productName,name, email, price, quantity, _id, paid, transactionId, payment , date} =
     order;
   const navigate = useNavigate();
-  console.log("order", order);
+  // console.log("order", order);
   const handlePaymentButton = () => {
     navigate(`/dashboard/payment/${_id}`);
   };

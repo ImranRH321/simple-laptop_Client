@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 const User = ({ user, ind, refetch }) => {
   const { name, email, role, _id } = user;
-
+//  console.log('user', user);
   const handleAdmin = () => {
     fetch(`https://laptop-1997.herokuapp.com/user/${email}`, {
       method: "PUT",
@@ -14,7 +14,7 @@ const User = ({ user, ind, refetch }) => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log("data", data);
+        // console.log("data", data);
         if (data.modifiedCount || data.matchedCount) {
           refetch();
           toast.success("successfully make admin add");
@@ -32,7 +32,6 @@ const User = ({ user, ind, refetch }) => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log("delete", data);
         if (data.deletedCount) {
           refetch();
           toast.success("Deleted user");

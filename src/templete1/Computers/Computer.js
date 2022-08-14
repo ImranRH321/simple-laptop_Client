@@ -11,18 +11,18 @@ const Computer = ({ tool }) => {
         <img className="h-[250x] w-full" src={img} alt="Shoes" />
       </figure>
 
-      <div class="card-body c">
-        <h2 class="card-title text-warning lg:text-1xl sm:text-md">{name.slice(0,20)}</h2>
+      <div class="card-body ">
+        <h2 class="card-title text-primary lg:text-1xl sm:text-md">{name.slice(0,20)}</h2>
         <h2 class="card-title">
-          Price: <span className="text-3xl text-warning sm:text-md">{price} ৳</span>
+          Price: <span className="text-3xl text-black sm:text-md">{price} ৳</span>
         </h2>
         <h2 class="card-title">
           MinQuantity:{" "}
-          <span className="text-2xl text-warning">{minimumQuantity}</span>
+          <span className="text-2xl text-primary">{minimumQuantity}</span>
         </h2>
         <div class="card-actions justify-end">
-          <Link to={`/tools/${tool._id}`} class="btn btn-primary">
-            Buy Now
+          <Link to={`/tools/${tool._id}`} class="btn btn-secondary">
+           Details
           </Link>
         </div>
       </div>

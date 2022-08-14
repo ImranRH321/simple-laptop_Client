@@ -4,15 +4,13 @@ import { Carousel } from "react-responsive-carousel";
 
 const Banner = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-grey">
       <Carousel>
-        <div>
+        <div className="h[200px]">
           <img
-            className="h-50"
-            src="https://images-cdn.newscred.com/Zz04NjA3ZjljMjQ0ODkxMWViOWRjYzU1OGJkNjI1ZjVkZA=="
+            src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/135038i27C06478AF01E2F1?v=v2"
             alt=""
           />
-          <p className="legend"> Laptop Product 1</p>
         </div>
         <div>
           <img
@@ -36,7 +34,7 @@ const Banner = () => {
             src="https://cdn.dribbble.com/users/1894420/screenshots/11563516/untitled-5.gif"
             alt=""
           />
-    <p className="legend"> Laptop product 4</p>
+          <p className="legend"> Laptop product 4</p>
         </div>
       </Carousel>
     </div>
